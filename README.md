@@ -55,6 +55,20 @@ Color was injected as a full RGB image and concatenated along with the polygon i
 - After ~25 epochs: It began to fill partial interiors.
 - After adding the **mask channel** and training longer (75 epochs), the output quality improved significantly.
 
+## 📉 Training & Validation Loss Curves
+
+- Project: [polygon-coloring-unet](https://wandb.ai/aashigupta-1509-mahindra-university/polygon-coloring-unet)
+- **Training Loss** dropped rapidly in the first ~15 epochs and stabilized after epoch 40
+- **Validation Loss** closely followed training loss — no overfitting observed
+- Both curves formed a steep "L" shape, indicating fast convergence and successful learning of the fill task
+
+## 🖼️ Qualitative Output Trends
+
+- **Early epochs**: Output images were noisy with no clear shape or correct color.
+- **Epochs 20–30**: Color appeared near the polygon outline, but fill was incomplete.
+- **Epochs 40–60**: Polygon shape and fill improved — model learned to apply correct color inside.
+- **Final epochs (~75)**: Most test cases showed clean, correctly colored filled polygons.
+
 ## 🔍 Typical Failure Modes:
 | Mode | Description | Fix |
 |------|-------------|-----|
@@ -62,14 +76,7 @@ Color was injected as a full RGB image and concatenated along with the polygon i
 | Full-image color fill | Entire image became filled with color | Adjusted mask generation logic |
 | Blurry outputs | Caused by MSE loss | Switched to `L1Loss()` for sharper boundaries |
 
----
 
-## 📉 Training & Validation Loss Curves
-
-- Project: [polygon-coloring-unet](https://wandb.ai/aashigupta-1509-mahindra-university/polygon-coloring-unet)
-- **Training Loss** dropped rapidly in the first ~15 epochs and stabilized after epoch 40
-- **Validation Loss** closely followed training loss — no overfitting observed
-- Both curves formed a steep "L" shape, indicating fast convergence and successful learning of the fill task
 ---
 
 ## 🔑 Key Learnings
