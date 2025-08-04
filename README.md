@@ -1,4 +1,4 @@
-# 🧠 Polygon Color Filling with UNet (Conditioned on Color Name)
+# Polygon Color Filling with UNet (Conditioned on Color Name)
 
 This project implements a deep learning model using a custom UNet architecture to generate filled polygon images. The model takes as input:
 - A polygon outline image (e.g., triangle, octagon),
