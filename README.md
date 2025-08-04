@@ -25,7 +25,7 @@ and outputs an RGB image of the polygon filled with the specified color.
 |------------------|---------------------------------|------------------------------------------|
 | Batch size        | 8                              | Fits comfortably in Colab GPU memory     |
 | Learning rate     | 1e-3                           | Stable convergence with Adam             |
-| Epochs            | 75                             | Longer training to allow mask-guided learning |
+| Epochs            | 30 (initial), 75               | Longer training to allow mask-guided learning |
 | Optimizer         | Adam                           | Adaptive and fast                        |
 | Loss Function     | MSELoss (initial), then L1Loss | L1 used for sharper image generation     |
 | Image Size        | 128x128                        | Trade-off between speed and quality      |
