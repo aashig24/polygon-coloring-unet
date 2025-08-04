@@ -55,7 +55,7 @@ Color was injected as a full RGB image and concatenated along with the polygon i
 - After ~25 epochs: It began to fill partial interiors.
 - After adding the **mask channel** and training longer (75 epochs), the output quality improved significantly.
 
-### 🔍 Typical Failure Modes:
+## 🔍 Typical Failure Modes:
 | Mode | Description | Fix |
 |------|-------------|-----|
 | Outline-only coloring | Model followed edges but left interiors white | Added binary mask |
@@ -64,13 +64,12 @@ Color was injected as a full RGB image and concatenated along with the polygon i
 
 ---
 
-## 📊 wandb Logging
+## 📉 Training & Validation Loss Curves
 
 - Project: [polygon-coloring-unet](https://wandb.ai/aashigupta-1509-mahindra-university/polygon-coloring-unet)
-- Logs include train/val loss and model checkpoints.
-
-
-
+- **Training Loss** dropped rapidly in the first ~15 epochs and stabilized after epoch 40
+- **Validation Loss** closely followed training loss — no overfitting observed
+- Both curves formed a steep "L" shape, indicating fast convergence and successful learning of the fill task
 ---
 
 ## 🔑 Key Learnings
