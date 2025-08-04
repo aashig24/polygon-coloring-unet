@@ -64,7 +64,7 @@ Color was injected as a full RGB image and concatenated along with the polygon i
 
 ---
 
-### 📉 Training & Validation Loss Curves
+## 📉 Training & Validation Loss Curves
 
 - Project: [polygon-coloring-unet](https://wandb.ai/aashigupta-1509-mahindra-university/polygon-coloring-unet)
 - **Training Loss** dropped rapidly in the first ~15 epochs and stabilized after epoch 40
